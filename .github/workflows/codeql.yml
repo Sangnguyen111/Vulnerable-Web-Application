@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'php' ]     # 👈 Bạn đang scan PHP
+        language: [ 'javascript' ]     # 👈 Bạn đang scan PHP
 
     steps:
       - name: Checkout repository
