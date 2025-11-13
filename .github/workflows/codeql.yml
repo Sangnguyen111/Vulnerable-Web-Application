@@ -1,12 +1,7 @@
-name: "CodeQL Scan PHP"
+name: "Manual CodeQL Scan"
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  schedule:
-    - cron: '0 2 * * *'
+  workflow_dispatch:   # ⚡ Cho phép chạy thủ công trong GitHub Actions UI
 
 jobs:
   analyze:
@@ -16,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript' ]
+        language: [ 'php' ]     # 👈 Bạn đang scan PHP
 
     steps:
       - name: Checkout repository
